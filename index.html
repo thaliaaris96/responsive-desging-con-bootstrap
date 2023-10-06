@@ -1,43 +1,148 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taller 14</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href=<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
+</h3500
 
 <body>
-    <div>
-        <nav class="container-nav">
-            <a href="#PagPrincipal">LoremIpsum</a>
-            <a href="#Dolor">Dolor</a>
-            <a href="#Sit">Sit</a>
-            <a href="#Amet">Amet</a>
-            <input type="search" placeholder="Buscar">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">LOREM IPSUM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <input class="form-control d-lg-none mt-2" type="search" placeholder="Search" aria-label="Search"
+                        data-bs-theme="light">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ms-lg-4">
+                            <a class="nav-link active" aria-current="page" href="#">Dolor</a>
+                        </li>
+                        <li class="nav-item ms-lg-4">
+                            <a class="nav-link" href="#">Sit</a>
+                        </li>
+                        <li class="nav-item ms-lg-4">
+                            <a class="nav-link" href="#">Amet</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="#" role="button" id="opcionesBtn">Opciones</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex" role="search">
+                        <input class="form-control d-none d-lg-block me-2" type="search" placeholder="Search"
+                            aria-label="Search" data-bs-theme="light">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
         </nav>
-        <h1>Lorem ipsum</h1>
-        <!-- Carrusel de imagenes va aquí -->
-        <section class="conteiner-option">
-            <a href="#Option1">Option 1</a>
-            <a href="#Option2">Option 2</a>
-            <a href="#Option3">Option 3</a>
-            <a href="#Option4">Option 4</a>
-        </section>
-        <div class="div-parrafo">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </p>
+    </header>
+
+    <main class="container">
+        <div class="d-none d-lg-block">
+            <div class="text-center my-5">
+                <h3>Lorem ipsum...</h3>
+                <div class="carousel slide" data-bs-ride="carousel" data-bs-touch="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="4500">
+                            <h6>...optimus prime ultra magnus pax orion</h6>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4500">
+                            <h6>...eveniet doloremque iure omnis animis</h6>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4500">
+                            <h6>...provident dignissimos minim architec</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <script src="js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <div class="row">
+            <div id="opciones" class="col d-none d-lg-block mt-2">
+                <div class="text-decoration-underline d-grid">
+                    <button class="btn btn-outline-secondary border text-start py-3 text-body">Opción 1</button>
+                    <button class="btn btn-outline-secondary border text-start py-3 text-body">Opción 2</button>
+                    <button class="btn btn-outline-secondary border text-start py-3 text-body">Opción 3</button>
+                    <button class="btn btn-outline-secondary border text-start py-3 text-body">Opción 4</button>
+                </div>
+            </div>
+            <div class="col-12 col-lg-9">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <div class="col bg-body-secondary my-2">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quia ad laborum, illo repellat
+                            veniam
+                            maiores doloribus nisi delectus esse placeat praesentium a nam natus amet laudantium minima
+                            facilis enim?
+                        </p>
+                    </div>
+                    <div class="col bg-body-tertiary my-2">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero nisi nobis libero sint
+                            accusantium!
+                            Cupiditate, nihil nisi. Cumque iusto perspiciatis, maiores rerum sint non architecto eaque
+                            repellat,
+                            voluptas obcaecati repellendus.</p>
+                    </div>
+                    <div class="col bg-body-secondary my-2">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio quidem nam eveniet
+                            blanditiis
+                            expedita numquam. Perferendis nemo officia consectetur est unde, eligendi at officiis
+                            distinctio, fugiat
+                            necessitatibus eos reprehenderit saepe.</p>
+                    </div>
+                    <div class="col bg-body-tertiary my-2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, deleniti dicta adipisci
+                            sapiente
+                            debitis laborum unde deserunt vel. Assumenda, culpa ex optio ipsa qui facere cumque aliquam
+                            similique
+                            veritatis illum.</p>
+                    </div>
+                    <div class="col bg-body-secondary my-2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime temporibus quisquam officia?
+                            Beatae harum
+                            rem at voluptatem ad deserunt nesciunt! Autem hic quae, non obcaecati repudiandae sapiente
+                            ipsum eum a?
+                        </p>
+                    </div>
+                    <div class="col bg-body-tertiary my-2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ducimus maiores ipsa
+                            veritatis, animi
+                            reiciendis fuga iusto cumque modi mollitia error libero eum delectus voluptate pariatur
+                            ipsum quas ad
+                            quos.</p>
+                    </div>
+                    <div class="col bg-body-secondary my-2">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eveniet numquam, sit
+                            atque dolorum
+                            cum saepe possimus velit cumque sunt nam libero illum vero laudantium labore necessitatibus.
+                            Aliquid,
+                            quisquam sed.</p>
+                    </div>
+                    <div class="col bg-body-tertiary my-2">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, iure expedita eaque quod
+                            fugit
+                            repellendus iusto! Recusandae maiores obcaecati nihil asperiores in ad molestiae, corporis,
+                            quo quaerat
+                            sunt, explicabo et?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
