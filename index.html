@@ -1,72 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Responsive Design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Enlace al archivo CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- Enlace mi propio archivo de estilo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
+        <!-- Barra de navegación con Bootstrap -->
+        <nav class="navbar navbar-expand-lg bg-secondary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#" id="titleNav">LOREM IPSUM</a>
+                <!-- Marca de la barra de navegación -->
+                <a class="navbar-brand text-white" href="#">LOREM IPSUM</a>
+                <!-- Botón de alternancia para pantallas pequeñas -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-label="Toggle navigation">
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Contenido colapsable de la barra de navegación -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <input class="form-control d-lg-none mt-2" type="search" placeholder="Search" aria-label="Search"
-                        data-bs-theme="light">
+                    <!-- Lista de elementos de la barra de navegación -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item ms-lg-4">
-                            <a class="nav-link active" aria-current="page" href="#">Dolor</a>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Dolor</a>
                         </li>
-                        <li class="nav-item ms-lg-4">
-                            <a class="nav-link" href="#">Sit</a>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Sit</a>
                         </li>
-                        <li class="nav-item ms-lg-4">
-                            <a class="nav-link" href="#">Amet</a>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Amet</a>
                         </li>
                         <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="#" role="button" id="opcionesBtn">Opciones</a>
+                            <a class="nav-link text-white" href="#" role="button" id="opcionesBtn">Opciones</a>
                         </li>
                     </ul>
-                    <div class="d-flex" role="search">
-                        <input class="form-control d-none d-lg-block me-2" type="search" placeholder="Buscar"
-                            aria-label="Search" data-bs-theme="light">
-                    </div>
+                    <!-- Formulario de búsqueda -->
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    </form>
                 </div>
             </div>
         </nav>
     </header>
 
     <main class="container">
+        <!-- Sección visible solo en pantallas grandes -->
         <div class="d-none d-lg-block">
             <div class="text-center my-5">
-                <h3>Lorem ipsum...</h3>
-                <div class="carousel slide" data-bs-ride="carousel" data-bs-touch="false">
+                <h4>Lorem ipsum...</h4>
+                 <!-- Carrusel de imágenes/textos con Bootstrap -->
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
+
                         <div class="carousel-item active" data-bs-interval="2000">
-                            <h6>...Lorem ipsum dolor sit</h6>
-                        </div>
-                        <div class="carousel-item" data-bs-interval="2000">
                             <h6>...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
                                 velit</h6>
                         </div>
+
                         <div class="carousel-item" data-bs-interval="2000">
-                            <h6>...in culpa qui officia deserunt mollit anim id est laborum</h6>
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <h6>Et quas quaerat vel atque quia et quibusdam magni ut dolorem quia. Qui placeat incidunt
+                                in minus nemo ut commodi optio hic odio quibusdam.</h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="opcionesContainer"> <!-- Contenedor de opciones -->
             <div id="opciones" class="col d-none d-lg-block mt-2">
                 <div class="text-decoration-underline d-grid">
                     <button class="btn btn-outline-secondary border text-start py-3 text-body">Opción 1</button>
@@ -75,77 +87,37 @@
                     <button class="btn btn-outline-secondary border text-start py-3 text-body">Opción 4</button>
                 </div>
             </div>
-            <div class="col-12 col-lg-9">
+
+            <div class="col-12 col-lg-9" id="textContainer"> <!-- Contenedor de texto -->
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                    <div class="col bg-body-tertiary my-2">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit
-                            esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
+                    <div class="col my-2 justified-text textos">
+                        <p>Lorem ipsum dolor sit amet. Aut iure quae nam veniam natus non maxime molestias. Eos illo quas est soluta quas est dolorum quia sed incidunt quidem et culpa omnis aut minus eveniet.</p>
                     </div>
-                    <div class="col bg-body-tertiary my-2">
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium,
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                            vitae
-                            dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                            fugit,
-                        </p>
+                    <div class="col my-2 justified-text textos">
+                        <p>Sed voluptas unde sed eius ipsa in alias accusamus sit quisquam asperiores cum facere nihil cum esse consequuntur. Ut commodi dicta non quibusdam eveniet et repudiandae ipsum eos voluptate alias ex rerum internos eos rerum iste. Ut minima deserunt eos nostrum harum sed possimus quia.</p>
                     </div>
-                    <div class="col bg-body-tertiary my-2">
-                        <p>Neque porro
-                            quisquam est,
-                            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-                            eius modi tempora
-                            incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
-                            quis nostrum
-                            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                            consequatur?.</p>
+                    <div class="col my-2 justified-text textos">
+                        <p>Lat exercitationem minus id pariatur modi a officiis molestias non eveniet laborum rem explicabo explicabo aut atque voluptas a voluptatem modi. Ut blanditiis culpa ex reiciendis beatae qui debitis quae et dolore ducimus! In omnis alias sed facere distinctio eos ipsa harum. Eum neque provident et quasi voluptatem non eveniet quis ut consequuntur commodi est similique architecto sit fugit enim.</p>
                     </div>
-                    <div class="col bg-body-tertiary my-2">
-                        <p>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-                            consequatur,
-                            vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                    <div class="col my-2 justified-text textos">
+                        <p>Lorem ipsum dolor sit amet. Eos placeat recusandae vel enim praesentium eum autem necessitatibus aut sapiente nobis. Et consequatur rerum et ipsa sapiente et omnis facere non amet corporis vel dolores minus et totam distinctio eos voluptate voluptatem.</p>
                     </div>
-                    <div class="col bg-body-tertiary my-2">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime temporibus quisquam officia?
-                            Beatae harum
-                            rem at voluptatem ad deserunt nesciunt! Autem hic quae, non obcaecati repudiandae sapiente
-                            ipsum eum a?
-                        </p>
+                    <div class="col my-2 justified-text textos">
+                        <p>Cum mollitia dignissimos ut nostrum nihil in unde asperiores! Et voluptatem fuga aut blanditiis rerum in voluptatem voluptates.</p>
                     </div>
-                    <div class="col bg-body-tertiary my-2">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ducimus maiores ipsa
-                            veritatis, animi
-                            reiciendis fuga iusto cumque modi mollitia error libero eum delectus voluptate pariatur
-                            ipsum quas ad
-                            quos.</p>
-                    </div>
-                    <div class="col bg-body-tertiary my-2">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eveniet numquam, sit
-                            atque dolorum
-                            cum saepe possimus velit cumque sunt nam libero illum vero laudantium labore necessitatibus.
-                            Aliquid,
-                            quisquam sed.</p>
-                    </div>
-                    <div class="col bg-body-tertiary my-2">
-                        <p>Excepteur sint occaecat cupidatat non proident,
-                            sunt
-                            in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="col my-2 justified-text textos">
+                        <p>Et commodi facilis non vitae dicta id nulla iste ex possimus aperiam. Aut nisi esse eum nisi facere nam omnis dolores?</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
-    <script src="index.js"></script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
